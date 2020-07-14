@@ -83,6 +83,8 @@
 
 
 ## Tamper
+Resource: https://docs.google.com/spreadsheets/d/10nMVkPNi5VS2s4Ju40IrvvaTO-grO_BTT5gJBtEhrb0/edit?source=post_page-----91be42dfc893----------------------#gid=0
+
 - **All scripts**
   ```
    --tamper=apostrophemask,apostrophenullencode,appendnullbyte,base64encode,between,bluecoat,chardoubleencode,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,halfversionedmorekeywords,ifnull2ifisnull,modsecurityversioned,modsecurityzeroversioned,multiplespaces,nonrecursivereplacement,percentage,randomcase,randomcomments,securesphere,space2comment,space2dash,space2hash,space2morehash,space2mssqlblank,space2mssqlhash,space2mysqlblank,space2mysqldash,space2plus,space2randomblank,sp_password,unionalltounion,unmagicquotes,versionedkeywords,versionedmorekeywords
